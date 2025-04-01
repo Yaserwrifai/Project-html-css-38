@@ -1,0 +1,1190 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 4000px;
+  color: #333;
+}
+
+/* Fist Page-------------------------------------------------------------------------------------------- */
+.container1 {
+  /* height:45rem ; */
+  position: relative;
+}
+
+/* Header styling using RGBA for transparency */
+.container1 .header {
+  background-color: RGBA(87, 123, 193, 0.7);
+  padding: 0.3rem 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Logo */
+.container1 .logo {
+  float: left;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Search Input */
+.container1 .search {
+  width: 13rem;
+  height: 1.5rem;
+  margin-left: 3.3rem;
+  margin-top: 0.4rem;
+  padding: 0.2rem 0.8rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  outline: 1px solid white;
+  outline-offset: 0.1rem;
+  border-radius: 1rem;
+}
+
+.container1 .searchicon {
+  position: absolute;
+  top: 17px;
+  font-size: 15px;
+  margin-left: 60px;
+}
+
+/* Navigation styling */
+.container1 .navbar {
+  float: right;
+  margin-top: -1.4rem;
+}
+
+.container1 .navbar ul {
+  list-style: none;
+}
+
+.container1 .navbar li {
+  float: left;
+  /* display: inline-block; */
+  margin-left: 1rem;
+  position: relative;
+  /* Needed to position the pseudo-element relative to the <li> */
+  padding-bottom: 5px;
+  /* Optional: adds some space between the text and underline */
+}
+
+.container1 li::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  /* Start position */
+  bottom: 0;
+  width: 0;
+  /* Start with no width */
+  height: 2px;
+  /* Thickness of the underline */
+  background-color: rgb(0, 17, 255);
+  /* Underline color */
+  transition: width 0.5s ease-in-out;
+  /* Animate width over 0.5s */
+}
+
+/* Hover state: the underline expands from 0 to 20px */
+.container1 li:hover::after {
+  width: 70%;
+  /* Final width of the underline */
+}
+
+.container1 .navbar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 0.75rem;
+}
+
+/* ------------------------Dropdown++++++++++++++++++++++ */
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* Hide dropdown content initially */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  width: 120px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  z-index: 2;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 0px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Banner */
+.container1 .banner {
+  background-image: url("../Images/home.jpeg");
+  background-size: cover;
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Content inside Banner */
+.container1 .content {
+  position: absolute;
+  /* position: relative; */
+  /* margin-top: 2rem; */
+  top: 15rem;
+  left: 10rem;
+  right: 10rem;
+  color: #fff;
+}
+
+/* Banner Text Styling */
+.container1 .banner h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.container1 .banner p {
+  font-size: 1.2rem;
+  width: 37.5rem;
+  margin: 0.5rem auto 2rem auto;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.container1 .buttons {
+  margin: 1rem 0;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+/* Button Variants */
+.container1 .btn-light {
+  background-color: #fff;
+  color: #0a4b86;
+}
+
+.container1 .btn-light:hover {
+  background-color: #fff0f0;
+}
+
+.container1 .btn-primary {
+  background-color: #0a4b86;
+  color: #fff;
+}
+
+.container1 .btn-primary:hover {
+  background-color: #893966;
+}
+
+/* Second Page-------------------------------------------------------------------------------------------- */
+.container2 {
+  text-align: center;
+  margin: 10px auto 0 auto;
+  overflow: auto;
+  height: 45rem;
+}
+
+.container2 h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: block;
+  width: 140px;
+  height: 4px;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+.container2 .header2 {
+  margin: 80px 0;
+}
+
+.container2 .box {
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 250px;
+  margin: 0px 4%;
+  border: 1px solid blue;
+  border-radius: 8px;
+  text-align: center;
+  overflow: auto;
+}
+
+/* Headings and text inside boxes */
+.container2 .box h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.container2 .box p {
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 25px 5px;
+  color: #C0C0C0;
+}
+
+/* Links */
+.container2 .box a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin: 0 120px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+
+.container2 .box i {
+  color: blue;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.container2 .box::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(50, 0, 255, 1);
+}
+
+.container2 .box:hover::after {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  transition: 1s;
+  cursor: auto;
+}
+
+.container2 .box:hover h2 {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.container2 .box:hover p {
+  color: black;
+}
+
+/* Third Page-------------------------------------------------------------------------------------------- */
+.container3 {
+  text-align: center;
+  margin: 10px auto 0 auto;
+  overflow: auto;
+  background-color: #EFEFEF;
+  height: 45rem;
+}
+
+.container3 h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* .line{
+  display: block;
+  width: 140px;
+  height: 4px;
+  background-color: blue;
+  margin:0 auto;
+} */
+.header3 {
+  margin: 50px 0;
+}
+
+.container3 .picture {
+  overflow: auto;
+}
+
+.container3 .typeimg {
+  text-align: center;
+}
+
+.container3 .img-box {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  margin: 1.66%;
+  overflow: auto;
+}
+
+.container3 .img-box img {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+/* Overlay that appears on hover */
+.container3 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.container3 .img-box:hover .overlay {
+  opacity: 1;
+}
+
+.container3 .overlay h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-top: 10px;
+  /* color: #7A73D1; */
+  color: #C0C0C0;
+}
+
+.container3 .overlay h4 {
+  font-size: 18px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-transform: lowercase;
+}
+
+.container3 .overlay .icons i {
+  font-size: 24px;
+  margin: 20px 0;
+  width: 50px;
+  height: 27px;
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+  color: #C0C0C0;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+/* Fourth Page-------------------------------------------------------------------------------------------- */
+/* Section Title */
+.container4 {
+  width: 80%;
+  height: 40rem;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.container4 h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Each box */
+.container4 .offer-box {
+  position: relative;
+  /* Needed for ::after overlay */
+  float: left;
+  /* Floats each box */
+  width: 30%;
+  /* 3 boxes per row */
+  height: 200px;
+  margin: 1.66%;
+  /* Some space between boxes */
+  background: #fff;
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  /* Left-align text inside the box */
+}
+
+/* Icon styling */
+.container4 .offer-box i {
+  font-size: 2rem;
+  color: #577BC1;
+  /* Adjust icon color */
+  margin-bottom: 10px;
+  float: left;
+}
+
+/* Heading and text inside the box */
+.container4 .offer-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+  padding-left: 45px;
+}
+
+.container4 .offer-box p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: grey;
+  float: left;
+  padding-left: 45px;
+}
+
+/* ::after pseudo-element overlay effect */
+.container4 .offer-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: RGBA(87, 123, 193, 0.1);
+  /* Color for overlay effect */
+  border-radius: 8px;
+  cursor: text;
+}
+
+.container4 .offer-box:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.container4 .offer-box:hover h2 {
+  color: blue;
+}
+
+.container4 .offer-box:hover p {
+  color: black;
+}
+
+/* 5th Page-------------------------------------------------------------------------------------------- */
+.container5 {
+  width: 80%;
+  height: 45rem;
+}
+
+.line5 {
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: blue;
+  margin-left: 90px;
+  margin-bottom: 50px;
+}
+
+.container5 h1 {
+  margin-left: 90px;
+}
+
+.container5 p {
+  margin-bottom: 50px;
+  margin-left: 90px;
+  width: 550px;
+  color: #C5D3E8;
+  font-weight: bold;
+}
+
+.container5 ul {
+  list-style: none;
+  line-height: 20px;
+  margin-left: 80px;
+  color: #A6AEBF;
+  font-weight: bold;
+}
+
+.container5 ul li {
+  line-height: 50px;
+}
+
+.container5 ul li:before {
+  content: '✓';
+  color: #007BFF;
+}
+
+.content5 {
+  float: left;
+  width: 60%;
+  /* padding-right: 20px; */
+  margin-left: 50px;
+}
+
+.image {
+  float: right;
+  width: 35%;
+  text-align: center;
+  margin-right: -150px;
+  margin-top: -50px;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: 480px;
+}
+
+.icon5 {
+  word-spacing: 10px;
+  margin-top: 8px;
+}
+
+.c1 {
+  color: #7886C7;
+}
+
+.c2 {
+  color: #FADA7A
+}
+
+.c3 {
+  color: #BFBBA9
+}
+
+/* Icons container5 is absolutely positioned relative to the image container */
+.container5 .icons5 {
+  position: absolute;
+  top: 0px;
+  /* Adjust vertical position */
+  right: 0px;
+  /* Adjust horizontal position */
+  opacity: 0;
+  /* Hide icons initially */
+}
+
+/* Show icons when hovering over the image container */
+.container5 .image:hover .icons5 {
+  opacity: 1;
+  cursor: pointer;
+  transition: 5s;
+}
+
+/* Style for each icon */
+.icons5 i {
+  font-size: 20px;
+  background-color: #e0dada;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;
+  /* Spacing between icons */
+}
+
+.container5 .ic2,
+.container5 .ic3 {
+  opacity: 0;
+}
+
+/* When hovering over the first icon, show the other two */
+.container5 .icon1:hover~.ic2,
+.container5 .icon1:hover~.ic3 {
+  opacity: 1;
+  transition: 5s;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* 6th Page-------------------------------------------------------------------------------------------- */
+.container6 {
+  /* background: url("../Images/back6.jpg") no-repeat center/cover; */
+  background-image: url("../Images/back6.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+}
+
+.container6 .stat-box {
+  float: left;
+  /* Float to the left */
+  width: 22%;
+  /* Four boxes, with spacing */
+  color: #1E90FF;
+  background: none;
+  text-align: center;
+  border-radius: 8px;
+  padding-top: 150px;
+  padding-left: 150px;
+}
+
+.stat-box h2,
+.stat-box p {
+  color: white;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 50px;
+}
+
+/* 7th Page-------------------------------------------------------------------------------------------- */
+.container7 {
+  text-align: center;
+  margin: 10px auto 0 auto;
+  overflow: auto;
+  height: 45rem;
+  cursor: default;
+}
+
+.container7 h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: block;
+  width: 140px;
+  height: 4px;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+.header7 {
+  margin: 80px 0;
+}
+
+.container7 .box {
+  position: relative;
+  float: left;
+  width: 22%;
+  height: 400px;
+  margin: auto;
+  border: 1px solid blue;
+  border-radius: 8px;
+  text-align: center;
+  overflow: auto;
+  cursor: default;
+  /* Default arrow cursor for non-text areas */
+}
+
+.container7 .box2 {
+  margin: 0 50px;
+}
+
+.container7 .box1 {
+  margin-left: 190px;
+}
+
+.container7 .box p {
+  text-align: center;
+  padding: 17px 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: text;
+  /* I-beam for text */
+}
+
+.container7 .p1 {
+  margin-top: 30px;
+}
+
+.container7 span {
+  cursor: text;
+  /* I-beam for text */
+}
+
+.container7 .price {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(50, 0, 255, 1);
+  border-radius: 50%;
+  margin: auto;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.price .span2 {
+  font-size: 38px;
+}
+
+.price .span2 {
+  display: block;
+}
+
+.container7 button {
+  border: 1px solid rgba(50, 0, 255, 1);
+  width: 170px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: auto;
+  /* Hand pointer on hover */
+}
+
+.container7 .box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(50, 0, 255, 1);
+  transition: 1s;
+  pointer-events: none;
+  /* Allow underlying elements to receive mouse events */
+}
+
+.container7 .box:hover::after {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  transition: 1s;
+  cursor: auto;
+}
+
+/* 8th Page-------------------------------------------------------------------------------------------- */
+/* Team Section Container */
+.team-section {
+  width: 100%;
+  padding: 40px 0;
+  background: url("../Images/7.jpeg") no-repeat center/cover;
+  opacity: 0.8;
+  overflow: auto;
+}
+
+.team-section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Profile Card using floats */
+.profile {
+  float: left;
+  width: 300px;
+  /* Adjust width as needed */
+  margin: 20px;
+  padding: 30px;
+  text-align: left;
+}
+
+.team-section .profile1 {
+  margin-left: 180px;
+}
+
+/* Header Section for Image & Text */
+.profile-header {
+  margin-bottom: 20px;
+  overflow: hidden;
+  /* Clears floats within the header */
+}
+
+/* Profile Image (Circular) */
+.profile-image {
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Profile Text: Positioned beside image */
+.profile-text {
+  margin-left: 115px;
+  /* Space for the floated image plus some gap */
+  padding-top: 20px;
+  /* Vertically aligns text with the image */
+}
+
+.profile-text h2 {
+  font-size: 1.7rem;
+  margin: 0 0 5px 0;
+  color: antiquewhite;
+}
+
+.profile .role {
+  color: blue;
+  margin: 0;
+}
+
+/* Paragraph Text Styling */
+.profile p {
+  width: 300px;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 9th Page-------------------------------------------------------------------------------------------- */
+/***** Container & Header *****/
+.container9 {
+  width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  /* Clears floated children */
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.header9 {
+  margin: 50px 0px;
+}
+
+.header9 h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.container9 .line {
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+.container9 .header9 {
+  margin: 80px 0;
+}
+
+/***** Team Boxes *****/
+.container9 .box {
+  float: left;
+  width: 25%;
+  height: auto;
+  /* Adjust as needed for layout (e.g., 30% if you want spacing) */
+  margin: 0 1%;
+  /* Small horizontal margin for spacing */
+  border: 1px solid #e0dada;
+  border-radius: 8px;
+  background-color: #e0dada;
+  padding: 20px 30px;
+  text-align: center;
+  position: relative;
+  /* Needed for the ::after overlay */
+  margin-bottom: 30px;
+}
+
+.container9 .box2 {
+  margin: 0 50px;
+}
+
+.container9 .box1 {
+  margin-left: 100px;
+}
+
+.container9 .box p {
+  text-align: center;
+  padding: 10px 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.container9 .box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: #000;
+  /* Semi-transparent overlay color */
+  opacity: 0.1;
+  transition: 1s;
+}
+
+.container9 .box:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.container9 .box:hover h1 {
+  color: white;
+}
+
+.container9 .box:hover p {
+  color: blue;
+}
+
+.container9 .team-item {
+  position: relative;
+}
+
+.container9 .team-icons {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  visibility: hidden;
+}
+
+.container9 .box:hover .team-icons {
+  visibility: visible;
+}
+
+.container9 .team-icons i {
+  display: block;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  margin-right: 37px;
+  padding: 12px;
+}
+
+/* 10th Page-------------------------------------------------------------------------------------------- */
+/***** Container & Header *****/
+.container10 {
+  width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  /* Clears floated children */
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.header10 {
+  margin: 50px 0px;
+}
+
+.header10 h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.container10 .line {
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+.container10 .header10 {
+  margin: 80px 0;
+}
+
+/***** Team Boxes *****/
+.container10 .box {
+  float: left;
+  width: 25%;
+  height: 500px;
+  /* Adjust as needed for layout (e.g., 30% if you want spacing) */
+  margin: 0 1%;
+  /* Small horizontal margin for spacing */
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: 20px 30px;
+  text-align: center;
+  position: relative;
+  /* Needed for the ::after overlay */
+  margin-bottom: 30px;
+  /* background-color: #f5ecec; */
+  position: relative;
+  z-index: 0;
+}
+
+.container10 .hp {
+  position: absolute;
+  z-index: 1;
+  margin: 0 0 20px -25px;
+}
+
+.container10 .box2 {
+  margin: 0 40px;
+}
+
+.container10 .box1 {
+  margin-left: 100px;
+}
+
+.container10 .box p {
+  text-align: center;
+  padding: 10px 5px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 20px 0;
+}
+
+.container10 .box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: rgba(139, 147, 230, 0.5);
+  /* Semi-transparent overlay color */
+  transition: 1s;
+}
+
+.container10 .box:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.container10 .box:hover h2 {
+  color: white;
+  transition: 1s;
+}
+
+.container10 .box:hover .texticon {
+  color: darkblue;
+  transition: 1s;
+}
+
+.container10 .box:hover p {
+  color: blue;
+}
+
+.container10 .team-item {
+  position: relative;
+  border-radius: 10px;
+}
+
+.container10 img {
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+}
+
+.container10 .team-icons i {
+  font-size: 16px;
+  color: rgb(47, 0, 255);
+  padding: 10px;
+}
+
+.container10 .texticon {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.container10 .hp a {
+  color: rgb(180, 42, 180);
+  text-decoration: none;
+}
+
+.container10 .hp h2 {
+  margin: 10px 0;
+}
+
+/* Footer-------------------------------------------------------------------------------------- */
+.footer {
+  width: 100%;
+  background-color: #d1d3f0;
+  padding: 20px 0px;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.content-footer {
+  margin: auto;
+  height: 300px;
+  width: 40%;
+  text-align: center;
+  position: relative;
+}
+
+.img-footer {
+  position: relative;
+  display: inline-block;
+}
+
+.img-footer img {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.ul-footer ul li {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #9198f7;
+  color: #fff;
+  font-size: 30px;
+  padding-top: 11px;
+  /* position: relative; */
+}
+
+.ul-footer p {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(100, 99, 99);
+  padding-top: 10px;
+}
+
+.ul-footer ul li:hover {
+  background-color: rgb(117, 117, 235);
+}
+
+/* ++++++++++++++++++++++++++++++++++++++ */
+/* Icons container is absolutely positioned relative to the image container */
+.footer .icons {
+  position: absolute;
+  top: 0px;
+  /* Adjust vertical position */
+  right: 0px;
+  /* Adjust horizontal position */
+  opacity: 0;
+  /* Hide icons initially */
+}
+
+/* Show icons when hovering over the image container */
+.img-footer:hover .icons {
+  opacity: 1;
+  cursor: pointer;
+  transition: 5s;
+}
+
+/* Style for each icon */
+.footer .icons i {
+  font-size: 20px;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  margin-bottom: 5px;
+  /* Spacing between icons */
+}
+
+.footer .ic2,
+.footer .ic3 {
+  opacity: 0;
+}
+
+/* When hovering over the first icon, show the other two */
+.footer .icon1:hover~.ic2,
+.footer .icon1:hover~.ic3 {
+  opacity: 1;
+  transition: 5s;
+}
+
+/* +++++++++++++++++++++++++++ */
