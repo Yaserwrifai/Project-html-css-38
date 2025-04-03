@@ -866,29 +866,43 @@ body {
 }
 
 /***** Team Boxes *****/
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* -------+++++++++++++++++++++++ */
+/* Updated CSS for container9 to match spacing of container10 */
+
+.container9 {
+  width: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
 .container9 .box {
   float: left;
-  width: 25%;
+  width: 25%; /* Adjusted to ensure equal spacing */
   height: auto;
-  /* Adjust as needed for layout (e.g., 30% if you want spacing) */
-  margin: 0 1%;
-  /* Small horizontal margin for spacing */
+  margin: 0 1.5%; /* Ensures equal spacing between boxes */
   border: 1px solid #e0dada;
   border-radius: 8px;
   background-color: #e0dada;
   padding: 20px 30px;
   text-align: center;
   position: relative;
-  /* Needed for the ::after overlay */
   margin-bottom: 30px;
 }
 
 .container9 .box2 {
-  margin: 0 50px;
+  margin: 0 40px;
 }
 
 .container9 .box1 {
   margin-left: 100px;
+}
+
+.container9 .box3 {
+  margin-right: 0; /* Ensuring right alignment matches container width */
 }
 
 .container9 .box p {
@@ -906,7 +920,6 @@ body {
   top: 0;
   left: 0;
   background: #000;
-  /* Semi-transparent overlay color */
   opacity: 0.1;
   transition: 1s;
 }
@@ -947,6 +960,7 @@ body {
   margin-right: 37px;
   padding: 12px;
 }
+
 
 /* 10th Page-------------------------------------------------------------------------------------------- */
 /***** Container & Header *****/
